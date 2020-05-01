@@ -1,0 +1,60 @@
+﻿https://code-maze.com/automapper-net-core/
+
+Automapper
+
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.1&tabs=visual-studio
+
+
+----------------------------------------------
+https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/testing?view=aspnetcore-3.1
+
+
+
+dotnet sln Dist.Micro.App.sln add ./Product.Common.Domain/Product.Common.Domain.csproj
+dotnet sln Dist.Micro.App.sln add ./Product.Services/Product.Services.csproj
+
+dotnet new classlib -n Product.Common.Domain -f netstandard2.1
+
+dotnet add Product.Services/Product.Services.csproj reference Product.Common.Domain/Product.Common.Domain.csproj
+dotnet add Product.ServiceAPI/Product.ServiceAPI.csproj reference Product.Common.Domain/Product.Common.Domain.csproj
+
+
+
+https://youtu.be/M6AkbBaDGJE
+
+https://youtu.be/M6AkbBaDGJE
+
+https://thecodebuzz.com/jwt-authentication-in-asp-net-core-3-0-with-examples/
+
+
+
+dotnet sln AspNetCoreTDD.sln add ./AspNetCoreMvcDemo/AspNetCoreMvcDemo.csproj
+dotnet sln AspNetCoreTDD.sln add ./AspNetCoreMvcUnitTests/AspNetCoreMvcUnitTests.csproj
+dotnet sln AspNetCoreTDD.sln add ./AspNetCoreMvcIntegrationTests/AspNetCoreMvcIntegrationTests.csproj
+
+
+dotnet add AspNetCoreMvcUnitTests/AspNetCoreMvcUnitTests.csproj reference AspNetCoreMvcDemo/AspNetCoreMvcDemo.csproj
+
+dotnet add AspNetCoreMvcIntegrationTests/AspNetCoreMvcIntegrationTests.csproj reference AspNetCoreMvcDemo/AspNetCoreMvcDemo.csproj
+
+
+------------------------------
+
+Robert Green and Phil Japiske on Mocking 
+https://youtu.be/dZ2Psa_Bn2Q
+
+https://www.youtube.com/watch?v=kInFI2x7yLY
+
+----------------
+dotnet new classlib -n ToDo.Domain
+dotnet sln ToDoApplication.Web.sln add ./ToDo.Domain/ToDo.Domain.csproj
+dotnet add ToDo.DataAccess/ToDo.DataAccess.csproj reference ToDo.Domain/ToDo.Domain.csproj
+
+dotnet new classlib -n ToDo.DataAccess
+dotnet sln ToDoApplication.Web.sln add ./ToDo.DataAccess/ToDo.DataAccess.csproj
+
+
+dotnet new classlib -n ToDo.Business
+dotnet sln ToDoApplication.Web.sln add ./ToDo.Business/ToDo.Business.csproj
+dotnet add ToDo.Business/ToDo.Business.csproj reference ToDo.Domain/ToDo.Domain.csproj
+dotnet add ToDo.Business/ToDo.Business.csproj reference ToDo.DataAccess/ToDo.DataAccess.csproj

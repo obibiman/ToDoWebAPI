@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ToDo.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="T:ToDo.WebAPI.Context.TodoContext">
+            <summary>
+            TodoContext
+            </summary>
+        </member>
+        <member name="M:ToDo.WebAPI.Context.TodoContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{ToDo.WebAPI.Context.TodoContext})">
+            <summary>
+            Constructor for TodoContext
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="P:ToDo.WebAPI.Context.TodoContext.TodoItems">
+            <summary>
+            TodoItems
+            </summary>
+        </member>
+        <member name="M:ToDo.WebAPI.Context.TodoContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            OnModelCreating
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:ToDo.WebAPI.Controllers.DoWorkController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ToDo.WebAPI.Controllers.DoWorkController.#ctor(ToDo.WebAPI.Context.TodoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:ToDo.WebAPI.Controllers.DoWorkController.GetTodoItems">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Controllers.DoWorkController.GetTodoItem(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Controllers.DoWorkController.PutTodoItem(System.Int64,ToDo.Domain.Models.TodoItem)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <param name="todoItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Controllers.DoWorkController.PostTodoItem(ToDo.Domain.Models.TodoItem)">
+            <summary>
+            
+            </summary>
+            <param name="todoItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Controllers.DoWorkController.DeleteTodoItem(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Controllers.DoWorkController.TodoItemExists(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ToDo.WebAPI.Controllers.TodoItemsController">
+            <summary>
+            TodoItemsController
+            </summary>
+        </member>
+        <member name="M:ToDo.WebAPI.Controllers.TodoItemsController.#ctor(ToDo.WebAPI.Services.Contracts.ITodoItemRepository,AutoMapper.IMapper)">
+            <summary>
+            Controller
+            </summary>
+            <param name="repo"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:ToDo.WebAPI.Controllers.TodoItemsController.GetTodoItems">
+            <summary>
+            GetTodoItems
+            </summary>
+            <returns>List of Todo items</returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Controllers.TodoItemsController.GetTodoItem(System.Int32)">
+            <summary>
+            GetTodoItem
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Controllers.TodoItemsController.PutTodoItem(System.Int32,ToDo.Domain.Models.TodoItem)">
+            <summary>
+            PutTodoItem
+            </summary>
+            <param name="id"></param>
+            <param name="todoItem"></param>
+            <returns>Single TodoItem</returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Controllers.TodoItemsController.PostTodoItem(ToDo.Domain.Models.TodoItem)">
+            <summary>
+            PostTodoItem
+            </summary>
+            <param name="todoItem"></param>
+            <returns>Single TodoItem</returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Controllers.TodoItemsController.DeleteTodoItem(System.Int32)">
+            <summary>
+            DeleteTodoItem
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Controllers.TodoItemsController.TodoItemExistsAsync(System.Int32)">
+            <summary>
+            TodoItemExistsAsync
+            </summary>
+            <param name="id"></param>
+            <returns>true or false</returns>
+        </member>
+        <member name="T:ToDo.WebAPI.Controllers.WeatherForecastController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ToDo.WebAPI.Controllers.WeatherForecastController.#ctor(Microsoft.Extensions.Logging.ILogger{ToDo.WebAPI.Controllers.WeatherForecastController})">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="M:ToDo.WebAPI.Controllers.WeatherForecastController.Get">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ToDo.WebAPI.Models.TodoItemDTO">
+            <summary>
+            TodoItem
+            </summary>
+        </member>
+        <member name="P:ToDo.WebAPI.Models.TodoItemDTO.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:ToDo.WebAPI.Models.TodoItemDTO.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:ToDo.WebAPI.Models.TodoItemDTO.IsComplete">
+            <summary>
+            IsComplete
+            </summary>
+        </member>
+        <member name="T:ToDo.WebAPI.Models.TodoItemProfile">
+            <summary>
+            TodoItemProfile
+            </summary>
+        </member>
+        <member name="M:ToDo.WebAPI.Models.TodoItemProfile.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:ToDo.WebAPI.Services.Contracts.ITodoItemRepository">
+            <summary>
+            ITodoItemRepository
+            </summary>
+        </member>
+        <member name="M:ToDo.WebAPI.Services.Contracts.ITodoItemRepository.CreateAsync(ToDo.Domain.Models.TodoItem)">
+            <summary>
+            CreateAsync
+            </summary>
+            <param name="todoItem"></param>
+            <returns>Create a Todo item</returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Services.Contracts.ITodoItemRepository.DeleteAsync(ToDo.Domain.Models.TodoItem)">
+            <summary>
+            DeleteAsync
+            </summary>
+            <param name="todoItem"></param>
+            <returns>Delete a Todo item</returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Services.Contracts.ITodoItemRepository.GetAllAsync">
+            <summary>
+            GetAllAsync
+            </summary>
+            <returns>List of todo items</returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Services.Contracts.ITodoItemRepository.GetByIdAsync(System.Int32)">
+            <summary>
+            GetByIdAsync
+            </summary>
+            <param name="Id"></param>
+            <returns>Single Todo item</returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Services.Contracts.ITodoItemRepository.UpdateAsync(ToDo.Domain.Models.TodoItem)">
+            <summary>
+            UpdateAsync
+            </summary>
+            <param name="todoItem"></param>
+            <returns>Updated Todo item</returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Services.Contracts.ITodoItemRepository.GetById(System.Int32)">
+            <summary>
+            GetById
+            </summary>
+            <param name="Id"></param>
+            <returns>Single Todo item</returns>
+        </member>
+        <member name="T:ToDo.WebAPI.Services.Repositories.TodoItemRepository">
+            <summary>
+            TodoItemRepository
+            </summary>
+        </member>
+        <member name="M:ToDo.WebAPI.Services.Repositories.TodoItemRepository.#ctor(ToDo.WebAPI.Context.TodoContext)">
+            <summary>
+            TodoItemRepository constructor
+            </summary>
+            <param name="ctxt"></param>
+        </member>
+        <member name="M:ToDo.WebAPI.Services.Repositories.TodoItemRepository.GetByIdAsync(System.Int32)">
+            <summary>
+            GetByIdAsync
+            </summary>
+            <param name="Id"></param>
+            <returns>Single TodoItem</returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Services.Repositories.TodoItemRepository.CreateAsync(ToDo.Domain.Models.TodoItem)">
+            <summary>
+            CreateAsync
+            </summary>
+            <param name="todoItem"></param>
+            <returns>Sngle TodoItem</returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Services.Repositories.TodoItemRepository.DeleteAsync(ToDo.Domain.Models.TodoItem)">
+            <summary>
+            DeleteAsync
+            </summary>
+            <param name="todoItem"></param>
+            <returns>Deletes single TodoItem</returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Services.Repositories.TodoItemRepository.GetAllAsync">
+            <summary>
+            GetAllAsync
+            </summary>
+            <returns>List of TodoItems</returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Services.Repositories.TodoItemRepository.UpdateAsync(ToDo.Domain.Models.TodoItem)">
+            <summary>
+            UpdateAsync
+            </summary>
+            <param name="todoItem"></param>
+            <returns>List of TodoItems</returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Services.Repositories.TodoItemRepository.GetById(System.Int32)">
+            <summary>
+            GetById
+            </summary>
+            <param name="Id"></param>
+            <returns>Single TodoItem</returns>
+        </member>
+    </members>
+</doc>

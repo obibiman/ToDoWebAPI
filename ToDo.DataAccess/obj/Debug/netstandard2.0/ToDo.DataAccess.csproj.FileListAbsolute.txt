@@ -1,0 +1,12 @@
+C:\DevSource\LowerOldRiver\Westlab\ToDoApplication.Web\ToDo.DataAccess\bin\Debug\netstandard2.0\ToDo.DataAccess.deps.json
+C:\DevSource\LowerOldRiver\Westlab\ToDoApplication.Web\ToDo.DataAccess\bin\Debug\netstandard2.0\ToDo.DataAccess.dll
+C:\DevSource\LowerOldRiver\Westlab\ToDoApplication.Web\ToDo.DataAccess\bin\Debug\netstandard2.0\ToDo.DataAccess.pdb
+C:\DevSource\LowerOldRiver\Westlab\ToDoApplication.Web\ToDo.DataAccess\bin\Debug\netstandard2.0\ToDo.Domain.dll
+C:\DevSource\LowerOldRiver\Westlab\ToDoApplication.Web\ToDo.DataAccess\bin\Debug\netstandard2.0\ToDo.Domain.pdb
+C:\DevSource\LowerOldRiver\Westlab\ToDoApplication.Web\ToDo.DataAccess\obj\Debug\netstandard2.0\ToDo.DataAccess.csprojAssemblyReference.cache
+C:\DevSource\LowerOldRiver\Westlab\ToDoApplication.Web\ToDo.DataAccess\obj\Debug\netstandard2.0\ToDo.DataAccess.AssemblyInfoInputs.cache
+C:\DevSource\LowerOldRiver\Westlab\ToDoApplication.Web\ToDo.DataAccess\obj\Debug\netstandard2.0\ToDo.DataAccess.AssemblyInfo.cs
+C:\DevSource\LowerOldRiver\Westlab\ToDoApplication.Web\ToDo.DataAccess\obj\Debug\netstandard2.0\ToDo.DataAccess.csproj.CopyComplete
+C:\DevSource\LowerOldRiver\Westlab\ToDoApplication.Web\ToDo.DataAccess\obj\Debug\netstandard2.0\ToDo.DataAccess.dll
+C:\DevSource\LowerOldRiver\Westlab\ToDoApplication.Web\ToDo.DataAccess\obj\Debug\netstandard2.0\ToDo.DataAccess.pdb
+C:\DevSource\LowerOldRiver\Westlab\ToDoApplication.Web\ToDo.DataAccess\obj\Debug\netstandard2.0\ToDo.DataAccess.csproj.CoreCompileInputs.cache

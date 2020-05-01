@@ -1,0 +1,9 @@
+C:\DevSource\LowerOldRiver\Westlab\ToDoApplication.Web\ToDo.Domain\bin\Debug\netstandard2.0\ToDo.Domain.deps.json
+C:\DevSource\LowerOldRiver\Westlab\ToDoApplication.Web\ToDo.Domain\bin\Debug\netstandard2.0\ToDo.Domain.dll
+C:\DevSource\LowerOldRiver\Westlab\ToDoApplication.Web\ToDo.Domain\bin\Debug\netstandard2.0\ToDo.Domain.pdb
+C:\DevSource\LowerOldRiver\Westlab\ToDoApplication.Web\ToDo.Domain\obj\Debug\netstandard2.0\ToDo.Domain.csproj.CoreCompileInputs.cache
+C:\DevSource\LowerOldRiver\Westlab\ToDoApplication.Web\ToDo.Domain\obj\Debug\netstandard2.0\ToDo.Domain.AssemblyInfoInputs.cache
+C:\DevSource\LowerOldRiver\Westlab\ToDoApplication.Web\ToDo.Domain\obj\Debug\netstandard2.0\ToDo.Domain.AssemblyInfo.cs
+C:\DevSource\LowerOldRiver\Westlab\ToDoApplication.Web\ToDo.Domain\obj\Debug\netstandard2.0\ToDo.Domain.dll
+C:\DevSource\LowerOldRiver\Westlab\ToDoApplication.Web\ToDo.Domain\obj\Debug\netstandard2.0\ToDo.Domain.pdb
+C:\DevSource\LowerOldRiver\Westlab\ToDoApplication.Web\ToDo.Domain\obj\Debug\netstandard2.0\ToDo.Domain.csprojAssemblyReference.cache
