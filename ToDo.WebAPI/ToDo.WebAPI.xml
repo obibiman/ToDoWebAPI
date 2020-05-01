@@ -9,6 +9,11 @@
             TodoContext
             </summary>
         </member>
+        <member name="M:ToDo.WebAPI.Context.TodoContext.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
         <member name="M:ToDo.WebAPI.Context.TodoContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{ToDo.WebAPI.Context.TodoContext})">
             <summary>
             Constructor for TodoContext

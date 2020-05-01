@@ -45,6 +45,8 @@ https://youtu.be/dZ2Psa_Bn2Q
 
 https://www.youtube.com/watch?v=kInFI2x7yLY
 
+https://www.youtube.com/watch?v=UON5Rr_CL2M
+
 ----------------
 dotnet new classlib -n ToDo.Domain
 dotnet sln ToDoApplication.Web.sln add ./ToDo.Domain/ToDo.Domain.csproj

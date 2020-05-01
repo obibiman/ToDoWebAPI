@@ -10,6 +10,13 @@ namespace ToDo.WebAPI.Context
     public class TodoContext : DbContext
     {
         /// <summary>
+        /// Constructor
+        /// </summary>
+        public TodoContext()
+        {
+                
+        }
+        /// <summary>
         /// Constructor for TodoContext
         /// </summary>
         /// <param name="options"></param>
