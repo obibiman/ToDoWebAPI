@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using ToDo.Domain.Models;
 using ToDo.WebAPI.Context;
@@ -67,7 +69,49 @@ namespace ToDo.WebAPI.Controllers
             return mappedTodoItem;
         }
 
-       
+
+        /// <summary>
+        /// GetTodoItemFiltered
+        /// </summary>
+        /// <param name="predicate"></param>
+        /// <returns>TodoItem filtered by parameter</returns>
+        [HttpGet]
+        [Route("filterone")]
+        public async Task<ActionResult<TodoItemDTO>> GetTodoItemFiltered(Expression<Func<TodoItem, bool>> predicate)
+        {
+            var todoItem = await _repo.GetFilteredAsync(predicate);
+            var mappedTodoItem = _mapper.Map<TodoItemDTO>(todoItem);
+
+            if (mappedTodoItem == null)
+            {
+                return NotFound();
+            }
+
+            return mappedTodoItem;
+        }
+
+
+        /// <summary>
+        /// GetTodoItemsFiltered
+        /// </summary>
+        /// <param name="predicate"></param>
+        /// <returns>List of TodoItems filtered by parameter</returns>
+        [HttpGet]
+        [Route("filterall")]
+        public async Task<ActionResult<IEnumerable<TodoItemDTO>>> GetTodoItemsFiltered(Expression<Func<TodoItem, bool>> predicate = null)
+        {
+            var todoItem = await _repo.GetAllFilteredAsync(predicate);
+            var mappedTodoItem = _mapper.Map<List<TodoItemDTO>>(todoItem);
+
+            if (mappedTodoItem == null)
+            {
+                return NotFound();
+            }
+
+            return mappedTodoItem;
+        }
+
+
         /// <summary>
         /// PutTodoItem
         /// </summary>
@@ -120,6 +164,18 @@ namespace ToDo.WebAPI.Controllers
         }
 
         /// <summary>
+        /// AddListOfItems
+        /// </summary>
+        /// <param name="entities"></param>
+        /// <returns>No return value</returns>
+        [HttpPost]
+        [Route("additems")]
+        public async Task AddToDoItems(IEnumerable<TodoItem> entities)
+        {
+             await _repo.AddRangeAsync(entities);
+        }
+
+        /// <summary>
         /// DeleteTodoItem
         /// </summary>
         /// <param name="id"></param>
@@ -137,6 +193,18 @@ namespace ToDo.WebAPI.Controllers
             await _repo.DeleteAsync(todoItem);
 
             return todoItem;
+        }
+       
+        /// <summary>
+        /// DeleteTodoItems
+        /// </summary>
+        /// <param name="entities"></param>
+        /// <returns>No return value</returns>
+        [HttpDelete]
+        [Route("deleteitems")]
+        public async Task DeleteTodoItems(IEnumerable<TodoItem> entities)
+        {
+            await _repo.RemoveRangeAsync(entities);         
         }
 
         /// <summary>

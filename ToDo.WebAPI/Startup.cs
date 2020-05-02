@@ -53,9 +53,9 @@ namespace ToDo.WebAPI
                     TermsOfService = new Uri("https://example.com/terms"),
                     Contact = new OpenApiContact
                     {
-                        Name = "Shayne Boyer",
+                        Name = "I. Maurice Muoneke",
                         Email = string.Empty,
-                        Url = new Uri("https://twitter.com/spboyer"),
+                        Url = new Uri("https://twitter.com/obibiman"),
                     },
                     License = new OpenApiLicense
                     {
@@ -88,7 +88,7 @@ namespace ToDo.WebAPI
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "ToDo.WebAPI V1");
                 c.RoutePrefix = string.Empty;
             });
 

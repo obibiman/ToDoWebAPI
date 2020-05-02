@@ -110,6 +110,20 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:ToDo.WebAPI.Controllers.TodoItemsController.GetTodoItemFiltered(System.Linq.Expressions.Expression{System.Func{ToDo.Domain.Models.TodoItem,System.Boolean}})">
+            <summary>
+            GetTodoItemFiltered
+            </summary>
+            <param name="predicate"></param>
+            <returns>TodoItem filtered by parameter</returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Controllers.TodoItemsController.GetTodoItemsFiltered(System.Linq.Expressions.Expression{System.Func{ToDo.Domain.Models.TodoItem,System.Boolean}})">
+            <summary>
+            GetTodoItemsFiltered
+            </summary>
+            <param name="predicate"></param>
+            <returns>List of TodoItems filtered by parameter</returns>
+        </member>
         <member name="M:ToDo.WebAPI.Controllers.TodoItemsController.PutTodoItem(System.Int32,ToDo.Domain.Models.TodoItem)">
             <summary>
             PutTodoItem
@@ -125,12 +139,26 @@
             <param name="todoItem"></param>
             <returns>Single TodoItem</returns>
         </member>
+        <member name="M:ToDo.WebAPI.Controllers.TodoItemsController.AddToDoItems(System.Collections.Generic.IEnumerable{ToDo.Domain.Models.TodoItem})">
+            <summary>
+            AddListOfItems
+            </summary>
+            <param name="entities"></param>
+            <returns>No return value</returns>
+        </member>
         <member name="M:ToDo.WebAPI.Controllers.TodoItemsController.DeleteTodoItem(System.Int32)">
             <summary>
             DeleteTodoItem
             </summary>
             <param name="id"></param>
             <returns></returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Controllers.TodoItemsController.DeleteTodoItems(System.Collections.Generic.IEnumerable{ToDo.Domain.Models.TodoItem})">
+            <summary>
+            DeleteTodoItems
+            </summary>
+            <param name="entities"></param>
+            <returns>No return value</returns>
         </member>
         <member name="M:ToDo.WebAPI.Controllers.TodoItemsController.TodoItemExistsAsync(System.Int32)">
             <summary>
@@ -186,6 +214,24 @@
             Constructor
             </summary>
         </member>
+        <member name="T:ToDo.WebAPI.Program">
+            <summary>
+            Program
+            </summary>
+        </member>
+        <member name="M:ToDo.WebAPI.Program.Main(System.String[])">
+            <summary>
+            Main
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:ToDo.WebAPI.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            CreateHostBuilder
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
         <member name="T:ToDo.WebAPI.Services.Contracts.ITodoItemRepository">
             <summary>
             ITodoItemRepository
@@ -231,6 +277,34 @@
             </summary>
             <param name="Id"></param>
             <returns>Single Todo item</returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Services.Contracts.ITodoItemRepository.GetFilteredAsync(System.Linq.Expressions.Expression{System.Func{ToDo.Domain.Models.TodoItem,System.Boolean}})">
+            <summary>
+            GetAsync
+            </summary>
+            <param name="predicate"></param>
+            <returns>Single Todo Item</returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Services.Contracts.ITodoItemRepository.GetAllFilteredAsync(System.Linq.Expressions.Expression{System.Func{ToDo.Domain.Models.TodoItem,System.Boolean}})">
+            <summary>
+            GetAllAsync
+            </summary>
+            <param name="predicate"></param>
+            <returns>List of TodoItems</returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Services.Contracts.ITodoItemRepository.AddRangeAsync(System.Collections.Generic.IEnumerable{ToDo.Domain.Models.TodoItem})">
+            <summary>
+            AddRangeAsync
+            </summary>
+            <param name="entities"></param>
+            <returns>Nothis is returned</returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Services.Contracts.ITodoItemRepository.RemoveRangeAsync(System.Collections.Generic.IEnumerable{ToDo.Domain.Models.TodoItem})">
+            <summary>
+            RemoveRangeAsync
+            </summary>
+            <param name="entities"></param>
+            <returns>No return value</returns>
         </member>
         <member name="T:ToDo.WebAPI.Services.Repositories.TodoItemRepository">
             <summary>
@@ -283,6 +357,59 @@
             </summary>
             <param name="Id"></param>
             <returns>Single TodoItem</returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Services.Repositories.TodoItemRepository.GetFilteredAsync(System.Linq.Expressions.Expression{System.Func{ToDo.Domain.Models.TodoItem,System.Boolean}})">
+            <summary>
+            GetAsync
+            </summary>
+            <param name="predicate"></param>
+            <returns>Single TodoItem filtered by parameter</returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Services.Repositories.TodoItemRepository.GetAllFilteredAsync(System.Linq.Expressions.Expression{System.Func{ToDo.Domain.Models.TodoItem,System.Boolean}})">
+            <summary>
+            GetAllAsync
+            </summary>
+            <param name="predicate"></param>
+            <returns>Single TodoItems filtered by parameter</returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Services.Repositories.TodoItemRepository.AddRangeAsync(System.Collections.Generic.IEnumerable{ToDo.Domain.Models.TodoItem})">
+            <summary>
+            AddRangeAsync
+            </summary>
+            <param name="entities"></param>
+            <returns>Add list of TodoItems</returns>
+        </member>
+        <member name="M:ToDo.WebAPI.Services.Repositories.TodoItemRepository.RemoveRangeAsync(System.Collections.Generic.IEnumerable{ToDo.Domain.Models.TodoItem})">
+            <summary>
+            RemoveRangeAsync
+            </summary>
+            <param name="entities"></param>
+            <returns>Delete list of TodoItems</returns>
+        </member>
+        <member name="T:ToDo.WebAPI.WeatherForecast">
+            <summary>
+            WeatherForecast
+            </summary>
+        </member>
+        <member name="P:ToDo.WebAPI.WeatherForecast.Date">
+            <summary>
+            Date
+            </summary>
+        </member>
+        <member name="P:ToDo.WebAPI.WeatherForecast.TemperatureC">
+            <summary>
+            TemperatureC
+            </summary>
+        </member>
+        <member name="P:ToDo.WebAPI.WeatherForecast.TemperatureF">
+            <summary>
+            TemperatureF
+            </summary>
+        </member>
+        <member name="P:ToDo.WebAPI.WeatherForecast.Summary">
+            <summary>
+            Summary
+            </summary>
         </member>
     </members>
 </doc>

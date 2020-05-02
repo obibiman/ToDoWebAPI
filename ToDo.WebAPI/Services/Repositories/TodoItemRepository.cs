@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using ToDo.Domain.Models;
 using ToDo.WebAPI.Context;
@@ -102,5 +103,52 @@ namespace ToDo.WebAPI.Services.Repositories
             var prodSku = _ctxt.TodoItems.FirstOrDefault(y => y.Id == Id);
             return prodSku;
         }
+
+        /// <summary>
+        /// GetAsync
+        /// </summary>
+        /// <param name="predicate"></param>
+        /// <returns>Single TodoItem filtered by parameter</returns>
+        public async Task<TodoItem> GetFilteredAsync(Expression<Func<TodoItem, bool>> predicate)
+        {
+            return await _ctxt.Set<TodoItem>().SingleOrDefaultAsync(predicate);
+        }
+
+        /// <summary>
+        /// GetAllAsync
+        /// </summary>
+        /// <param name="predicate"></param>
+        /// <returns>Single TodoItems filtered by parameter</returns>
+        public async Task<IEnumerable<TodoItem>> GetAllFilteredAsync(Expression<Func<TodoItem, bool>> predicate = null)
+        {
+            return await _ctxt.Set<TodoItem>().Where(predicate).ToListAsync();
+        }
+
+        /// <summary>
+        /// AddRangeAsync
+        /// </summary>
+        /// <param name="entities"></param>
+        /// <returns>Add list of TodoItems</returns>
+
+        public async Task AddRangeAsync(IEnumerable<TodoItem> entities)
+        {
+            _ctxt.TodoItems.AddRange(entities);
+            await _ctxt.SaveChangesAsync();
+        }
+        /// <summary>
+        /// RemoveRangeAsync
+        /// </summary>
+        /// <param name="entities"></param>
+        /// <returns>Delete list of TodoItems</returns>
+        public async Task RemoveRangeAsync(IEnumerable<TodoItem> entities)
+        {
+             _ctxt.TodoItems.RemoveRange(entities);
+            await _ctxt.SaveChangesAsync();
+        }
+
+
+
+        //Adding additional filters
+
     }
 }
